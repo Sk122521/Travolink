@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddStayActivity">
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="Add Stay"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"></TextView>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview1"
+        android:layout_marginTop="4dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <AutoCompleteTextView
+                    android:id="@+id/type_stay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="TYPE OF STAY"/>
+                <EditText
+                    android:id="@+id/nameofstay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ENTER STAY NAME"
+                    android:layout_below="@id/type_stay"/>
+
+                <EditText
+                    android:id="@+id/cityofstay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nameofstay"
+                    android:hint="ENTER ADDRESS MANUALLY" />
+
+                <EditText
+                    android:id="@+id/phoneofstay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:layout_below="@id/cityofstay"
+                    android:hint="Enter whatsapp number( if any )" />
+                <TextView
+                    android:id="@+id/textview4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/phoneofstay"
+                    android:layout_marginTop="20dp"
+                    android:text="PAYMENTS" />
+
+                <LinearLayout
+                    android:id="@+id/Linearlayout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textview4"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkbox1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cash"
+                        android:onClick="CheckboxListener"/>
+
+                    <CheckBox
+                        android:id="@+id/checkbox2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cards"
+                        android:onClick="CheckboxListener"/>
+
+                    <CheckBox
+                        android:id="@+id/checkbox3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UPI"
+                       android:onClick="CheckboxListener"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/Occupancy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Linearlayout2"
+                    android:layout_marginTop="5dp"
+                    android:text="OCCUPANCY TYPE" />
+
+                <LinearLayout
+                    android:id="@+id/occupancyLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:layout_below="@id/Occupancy"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkbox4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Single"
+                        android:onClick="CheckboxListener"
+                        />
+
+                    <CheckBox
+                        android:id="@+id/checkbox5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Twin Sharing"
+                        android:onClick="CheckboxListener"/>
+
+                    <CheckBox
+                        android:id="@+id/checkbox6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Triple Sharing"
+                        android:onClick="CheckboxListener"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/preferred"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/occupancyLayout"
+                    android:layout_marginTop="5dp"
+                    android:text="TENANTS PREFFERED" />
+
+                <LinearLayout
+                    android:id="@+id/Tenents_preffred_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:layout_below="@id/preferred"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkbox7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Professionals"
+                        android:layout_weight="1"
+                        android:onClick="CheckboxListener"/>
+
+                    <CheckBox
+                        android:id="@+id/checkbox8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Students"
+                        android:onClick="CheckboxListener"/>
+
+                    <CheckBox
+                        android:id="@+id/checkbox9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="for boys"
+                        android:onClick="CheckboxListener"/>
+                    <CheckBox
+                        android:id="@+id/checkbox10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="for girls" />
+                </LinearLayout>
+                <MultiAutoCompleteTextView
+                    android:id="@+id/facilities_Textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Tenents_preffred_layout"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:hint="Amenities.."></MultiAutoCompleteTextView>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edittext_aboutstay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/facilities_Textview"
+                    android:background="@drawable/input"
+                    android:hint="Write Description..."
+                    android:padding="30dp" />
+
+                <LinearLayout
+                    android:id="@+id/linear_layout8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/edittext_aboutstay"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textview7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ADD IMAGES (Interior and Exterior)" />
+
+                    <ImageButton
+                        android:id="@+id/add_image_stay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="@color/cardview_light_background"
+                        android:src="@drawable/add3" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/Stayrecyclerview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linear_layout8" />
+                <LinearLayout
+                    android:id="@+id/linear_layout9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                   android:layout_below="@id/Stayrecyclerview"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textview8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ADD Nearby Famous Places Image" />
+
+                    <ImageButton
+                        android:id="@+id/add_nearby"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="@color/cardview_light_background"
+                        android:src="@drawable/add3" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/nearbyPlacesview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:layout_below="@id/linear_layout9" />
+
+                <EditText
+                    android:id="@+id/website_hotel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nearbyPlacesview"
+                    android:hint="Enter website(if any)"
+                    android:inputType="textWebEmailAddress" />
+
+                <CheckBox
+                    android:id="@+id/Location_Check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/website_hotel"
+                    android:onClick="onCheckboxClicked"
+                    android:text="Check the box to set your restaurent location"
+                    />
+
+                <TextView
+                    android:id="@+id/hintview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Location_Check"
+                    android:text="you current location will be taken so you must be at restaurent" />
+
+                <Button
+                    android:id="@+id/save_info_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hintview"
+                    android:text="@string/saveinfo" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</RelativeLayout>

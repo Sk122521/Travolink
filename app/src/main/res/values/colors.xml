@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#ff52a0ff</color>
+    <color name="colorPrimary">#ff00a3fa</color>
+    <color name="colorPrimaryDark">#ff03a7ff</color>
+    <color name="endblue">#ff5294ff</color>
+    <color name="lightbue">#856addfd</color>
+    <color name="online_icon_background">#fffdfcff</color>
+    <color name="online_star_background">#fffdfcff</color>
+    <color name="pdf_icon_background">#fffdfcff</color>
+    <color name="selected_background">#ffffaa3f</color>
+    <color name="send_icon_background">#ff9f00ff</color>
+    <color name="startblue">#ff52a0ff</color>
+    <color name="Button_Normal_Color">#ff252525</color>
+    <color name="codeGray">#e7e7e7</color>
+    <color name="gray">#808080</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="background">#23000000</color>
+
+</resources>

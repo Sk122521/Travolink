@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/home" android:id="@+id/Video" android:menuCategory="secondary" android:title="Videos"/>
+    <item android:icon="@drawable/posts" android:id="@+id/posts" android:menuCategory="secondary" android:title="@string/Posts" />
+    <item android:icon="@drawable/add" android:id="@+id/addPost" android:menuCategory="secondary" android:title="Add Posts" />
+    <item android:icon="@drawable/home" android:id="@+id/travel" android:menuCategory="secondary" android:title="@string/Exploreit" />
+    <item android:icon="@drawable/message_icon" android:id="@+id/notification" android:menuCategory="secondary" android:title="Notification"/>
+ </menu>

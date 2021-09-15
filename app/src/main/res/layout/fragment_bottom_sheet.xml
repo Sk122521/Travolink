@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/adddestination_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:autoSizeTextType="uniform"
+        android:text="Add Destinations"
+        app:strokeColor="@color/colorPrimaryDark"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addrestaurent_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:text="Add Restaurant"
+        android:autoSizeTextType="uniform"
+        app:strokeColor="@color/colorPrimaryDark"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addstay_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:autoSizeTextType="uniform"
+        android:text="Add Stay"
+        app:strokeColor="@color/colorPrimaryDark"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addexperiences_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:autoSizeTextType="uniform"
+        android:text="Your Experiences"
+        app:strokeColor="@color/colorPrimaryDark"
+        />
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawable_layout1"
+    android:background="#ffdeedf4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/app_main_toolb"
+            android:background="@drawable/top_background"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/app_name"
+            app:titleTextColor="@color/colorPrimary" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:orientation="vertical"
+                android:id="@+id/all_user_post_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/app_main_toolb"
+                android:scrollbars="vertical" />
+        <ProgressBar
+            android:id="@id/progressBar"
+            style="?android:progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/app_main_toolb"
+            android:layout_centerInParent="true"
+            android:layout_margin="100dp" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/message_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@color/colorPrimary"
+            android:clickable="true"
+            android:src="@drawable/messages"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_gravity="start"
+        android:id="@+id/navigation_view"
+        android:fitsSystemWindows="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="3dp"
+        app:itemIconTint="@color/nav"
+        app:itemTextColor="@color/nav"
+        app:menu="@menu/menu" />
+</androidx.drawerlayout.widget.DrawerLayout>

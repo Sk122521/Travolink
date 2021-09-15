@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddRestaurentActivity">
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="Add destination you travelled"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"></TextView>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview1"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                >
+                <EditText
+                    android:id="@+id/nameofdestination"
+                    android:layout_width="match_parent"
+                    android:layout_height ="wrap_content"
+                    android:hint="ENTER DESTINATION NAME"/>
+                <MultiAutoCompleteTextView
+                    android:id="@+id/LocationTypeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="TYPE OF DESTINATION"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/nameofdestination">
+                </MultiAutoCompleteTextView>
+                <EditText
+                    android:id="@+id/popular"
+                    android:layout_below="@id/LocationTypeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="what prompted you to travel here..."
+                    />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edittext_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/popular"
+                    android:background="@drawable/input"
+                    android:text="My experience...."
+                    android:padding="30dp" />
+                <LinearLayout
+                    android:id="@+id/linear_layout11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/edittext_about">
+                    <TextView
+                        android:id="@+id/textview12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add Photos"/>
+                    <ImageButton
+                        android:id="@+id/add_locationimage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/add3"
+                        android:background="@color/cardview_light_background"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/imagerecyclerview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linear_layout11" />
+                <EditText
+                    android:id="@+id/FoodCult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Food and Culture..."
+                    android:layout_below="@id/imagerecyclerview"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/backpack"
+                    android:hint="Backpacking advice...."
+                    android:inputType="textWebEditText"
+                    android:layout_below="@+id/FoodCult"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/guide"
+                    android:hint="Any guide for travellers... "
+                    android:inputType="textWebEditText"
+                    android:layout_below="@+id/backpack"/>
+                <EditText
+                    android:id="@+id/quote"
+                    android:layout_below="@id/guide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="A travel quote for this destination...."/>
+                <TextView
+                    android:id="@+id/show_latitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/quote"
+                    android:layout_margin="5dp"
+                    android:visibility="gone" />
+                <TextView
+                    android:id="@+id/show_longitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/show_latitude"
+                    android:layout_margin="5dp"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/exact_addressline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/show_longitude"
+                    android:layout_margin="5dp"
+                    android:visibility="gone"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/getLocation_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/exact_addressline"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_alignParentStart="true"
+                    android:drawableLeft="@drawable/locationicon"
+                    android:text="Get destination Location" />
+
+                <Button
+                    android:id="@+id/save_destination_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/saveinfo"
+                    android:layout_below="@id/getLocation_button"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditStayActivity">
+
+    <TextView
+        android:id="@+id/textview_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="Request foe edit"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"></TextView>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_request"
+        android:layout_marginTop="4dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <TextView
+                    android:id="@+id/hint_stay_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="* Write on those field you want to edit.."/>
+                <TextView
+                    android:id="@+id/nameofstay_edit1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hint_stay_edit"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textColor="@android:color/black"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/phoneofstay_edit1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:layout_below="@id/nameofstay_edit1"
+                    android:layout_marginTop="5dp"
+                    android:hint="Enter whatsapp number( if any )" />
+                <TextView
+                    android:id="@+id/textview4_edit1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/phoneofstay_edit1"
+                    android:layout_marginTop="20dp"
+                    android:text="PAYMENTS" />
+
+                <LinearLayout
+                    android:id="@+id/Linearlayout2_edit1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textview4_edit1"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkbox1_edit1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cash"
+                        android:onClick="CheckboxListener"/>
+
+                    <CheckBox
+                        android:id="@+id/checkbox2_edit1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cards"
+                        android:onClick="CheckboxListener"/>
+
+                    <CheckBox
+                        android:id="@+id/checkbox3_edit1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UPI"
+                        android:onClick="CheckboxListener"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/Occupancy_edit1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Linearlayout2_edit1"
+                    android:layout_marginTop="5dp"
+                    android:text="OCCUPANCY TYPE" />
+
+                <LinearLayout
+                    android:id="@+id/occupancyLayout_edit1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Occupancy_edit1"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkbox4_edit1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Single"
+                        android:onClick="CheckboxListener"
+                        />
+
+                    <CheckBox
+                        android:id="@+id/checkbox5_edit1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Twin Sharing"
+                        android:onClick="CheckboxListener"/>
+
+                    <CheckBox
+                        android:id="@+id/checkbox6_edit1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Triple Sharing"
+                        android:onClick="CheckboxListener"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/preferred_edit1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/occupancyLayout_edit1"
+                    android:layout_marginTop="5dp"
+                    android:text="TENANTS PREFFERED" />
+
+                <LinearLayout
+                    android:id="@+id/Tenents_preffred_layout_edit1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/preferred_edit1"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkbox7_edit1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Professionals"
+                        android:layout_weight="1"
+                        android:onClick="CheckboxListener"/>
+
+                    <CheckBox
+                        android:id="@+id/checkbox8_edit1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Students"
+                        android:onClick="CheckboxListener"/>
+
+                    <CheckBox
+                        android:id="@+id/checkbox9_edit1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="for boys"
+                        android:onClick="CheckboxListener"/>
+                    <CheckBox
+                        android:id="@+id/checkbox10_edit1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="for girls"
+                        android:onClick="CheckboxListener"/>
+                </LinearLayout>
+                <MultiAutoCompleteTextView
+                    android:id="@+id/facilities_Textview_edit1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Tenents_preffred_layout_edit1"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:hint="Amenities.."></MultiAutoCompleteTextView>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edittext_aboutstay_edit1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/facilities_Textview_edit1"
+                    android:background="@drawable/input"
+                    android:hint="Write Description..."
+                    android:padding="30dp" />
+
+                <LinearLayout
+                    android:id="@+id/linear_layout8_edit1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/edittext_aboutstay_edit1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textview7_edit1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ADD IMAGES (Interior and Exterior)" />
+
+                    <ImageButton
+                        android:id="@+id/add_image_stay_edit1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="@color/cardview_light_background"
+                        android:src="@drawable/add3" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/Stayrecyclerview_edit1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linear_layout8_edit1" />
+                <LinearLayout
+                    android:id="@+id/linear_layout9_edit1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/Stayrecyclerview_edit1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textview8_edit1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ADD Nearby Famous Places Image" />
+
+                    <ImageButton
+                        android:id="@+id/add_nearby_edit1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="@color/cardview_light_background"
+                        android:src="@drawable/add3" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/nearbyPlacesview_edit1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linear_layout9_edit1" />
+
+                <EditText
+                    android:id="@+id/website_hotel_edit1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nearbyPlacesview_edit1"
+                    android:hint="Enter website(if any)"
+                    android:inputType="textWebEmailAddress" />
+                <EditText
+                    android:id="@+id/request_stay_edit"
+                    android:layout_below="@id/website_hotel_edit1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Any request (Something idea you want to add)...."/>
+                <Button
+                    android:id="@+id/save_info_button_edit1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/request_stay_edit"
+                    android:text="@string/saveinfo" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</RelativeLayout>

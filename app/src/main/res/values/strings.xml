@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="google_maps_key">AIzaSyC3m2cG02WHE9D0etbM-lu9A-34tUKDxEo</string>
+    <string name="Accountupdated">Your account updated successfully</string>
+    <string name="Address">Address</string>
+    <string name="Choosefromgallery">Choose from gallery</string>
+    <string name="Drawer_closed" translatable="false">drawer closed</string>
+    <string name="Drawer_open" translatable="false">drawer open</string>
+    <string name="Edit_profile">Edit Profile</string>
+    <string name="Exploreit">Exploreit</string>
+    <string name="Feedaback">Your Suggestions</string>
+    <string name="friendrequest">Friend requests</string>
+    <string name="Find_Freinds">Find Friends</string>
+    <string name="Logout">Logout</string>
+    <string name="Message">Message</string>
+    <string name="Message_toolbar">Messages</string>
+    <string name="Posts">Posts</string>
+    <string name="Profile">Profile</string>
+    <string name="Takephoto">Take photo</string>
+    <string name="Travel">Tours</string>
+    <string name="TravelX">Travolink</string>
+    <string name="address">Residential address</string>
+    <string name="app_name">Travolink</string>
+    <string name="bio">Bio/Status</string>
+    <string name="create_post">Create Post</string>
+    <string name="create_post_text">Write some text....</string>
+    <string name="dob">Date of birth</string>
+    <string name="fullname">Enter your name</string>
+    <string name="gallery">gallery</string>
+    <string name="grid_view">Grid View</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="location">Add location</string>
+    <string name="login">Signin with</string>
+    <string name="message">post your comments here....</string>
+    <string name="messages_header">Messages</string>
+    <string name="movie">Movie</string>
+    <string name="nav_help">About us</string>
+    <string name="nav_support">Support</string>
+    <string name="not_set">Not set</string>
+    <string name="ok">Okay</string>
+    <string name="post">POST</string>
+    <string name="post_text">Share your memories...</string>
+    <string name="profilephoto">Profile Photo</string>
+    <string name="progress">Progress:</string>
+    <string name="required">*required</string>
+    <string name="retry">Retry</string>
+    <string name="sample_text">Sample Text</string>
+    <string name="save">Save</string>
+    <string name="saveinfo">Save Info</string>
+    <string name="search_menu_title">Search</string>
+    <string name="seen_message">"seen basically displays the number of people who have seen that post.
+        1.Even if don't like post, please click on seen, which marks you have seen that post.
+        2.Names of the people(who clicked on seen) won't be shown only the number of seen will displayed.
+So, feel free to click on seen."</string>
+    <string name="seen_title">What is seen?</string>
+    <string name="sex">Sex</string>
+    <string name="signature_title">Your signature</string>
+    <string name="status">Interested in</string>
+    <string name="username">Username</string>
+    <string name="visit">Visited at</string>
+    <string name="visitby">*you can enter the place where you have visited above</string>
+    <string name="wait">profile image is uploading...</string>
+    <string name="website">Enter Links</string>
+    <string name="websiteandlinks">*You can enter website and links above</string>
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+    <string name="title_activity_maps" translatable="false">Map</string>
+    <string name="title_activity_another_map" translatable="false">Map</string>
+    <string name="title_activity_geocoding" translatable="false">Map</string>
+    <string name="Drag_marker">* You can also Drag and Drop marker to the destination location</string>
+    <string name="facebook_app_id" translatable="false">491958725513027</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb491958725513027</string>
+    <string name="nav_language">Language</string>
+    <string name="select_image">select multiple images</string>
+    <string name="toast_one">Please,wait while Uploading your Destination information ....</string>
+    <string name="toast_two">destination info is saved it will be shown there in few hours</string>
+    <string name="friend_req1">Accept Friend request</string>
+    <string name="friend_req2">Cancel Friend request</string>
+    <string name="friend_req3">Undo Friend request</string>
+    <string name="nav_policy">Privacy policy</string>
+    <string name="depth_use_explanation" translatable="false">When Depth is enabled on supported devices, virtual objects adapt to the environment by blending in with the real world.</string>
+    <string name="button_text_enable_depth" translatable="false">Enable</string>
+    <string name="button_text_disable_depth" translatable="false">Disable</string>
+    <string name="options_title_with_depth" translatable="false">Your device supports depth</string>
+    <string name="options_title_without_depth" translatable="false">Your device does not support depth</string>
+    <string name="done" translatable="false">Done</string>
+    <string-array name="depth_options_array" translatable="false">
+        <item>Enable depth</item>
+        <item>Show depth map</item>
+    </string-array>
+    <string name="options_title_instant_placement" translatable="false">Instant Placement options</string>
+    <string-array name="instant_placement_options_array" translatable="false">
+        <item>Enable Instant Placement</item>
+    </string-array>
+    <string name="About_us">We are travel app aims to improve tourism experience for any travelers. People can add unknown destinations and it will be shown on respective city. Your added destination will also appear in your profile too.Our aims in future is to help travelers in finding best hotels, restuarant, local stays and destinations .You can also post photos where you have travelled which have like and seen feature too. People having their own restaurant and stays can add their restaurant and stays, it will be shown in respective city after verification of info.</string>
+    <string name="manifast" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+
+    <string name="BannerAd" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string name="InterstitialAd" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+
+    <string name="nativead" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+
+    <string name="ad_attribution" translatable="false">Ad</string>
+
+    <string name="AudioCompressor">AudioCompressor</string>
+
+    <string name="AudioCutter">AudioCutter</string>
+
+    <string name="AudioJoiner">AudioJoiner</string>
+
+    <string name="AudioVideoMixer">AudioVideoMixer</string>
+
+    <string name="FastMotionVideo">FastMotionVideo</string>
+
+    <string name="MainFolderName">VEditor</string>
+
+    <string name="PhotoToVideo">PhotoToVideo</string>
+
+    <string name="SlowMotionVideo">SlowMotionVideo</string>
+
+    <string name="VideoCollage">VideoCollage</string>
+
+    <string name="VideoCompressor">VideoCompressor</string>
+
+    <string name="VideoConverter">VideoConverter</string>
+
+    <string name="VideoCroper">VideoCroper</string>
+
+    <string name="VideoCutter">VideoCutter</string>
+
+    <string name="VideoJoiner">VideoJoiner</string>
+
+    <string name="VideoMirror">VideoMirror</string>
+
+    <string name="VideoMute">VideoMute</string>
+
+    <string name="VideoReverse">VideoReverse</string>
+
+    <string name="VideoRotate">VideoRotate</string>
+
+    <string name="VideoSplitter">VideoSplitter</string>
+
+    <string name="VideoToGIF">VideoToGIF</string>
+
+    <string name="VideoToImage">VideoToImage</string>
+
+    <string name="VideoToMP3">VideoToMP3</string>
+
+    <string name="VideoWatermark">VideoWatermark</string>
+
+    <string name="alert_ok_button">OK</string>
+
+    <string name="alert_title_failure">Error</string>
+
+    <string name="alert_title_success">Success</string>
+
+    <string name="app_folder_name2">VideoCollage</string>
+
+    <string name="artist_name">RingtoneMaker</string>
+
+    <string name="bad_extension_error">Sorry, RingtoneMaker is not yet able to edit files of type</string>
+
+    <string name="cancel">Cancel</string>
+
+    <string name="character_counter_pattern">%1$d / %2$d</string>
+
+    <string name="common_google_play_services_unknown_issue">%1$s is having trouble with Google Play services. Please try again.</string>
+
+    <string name="delete_tmp_error">Error deleting temporary file</string>
+
+    <string name="end_marker">End marker</string>
+
+    <string name="no_extension_error">Sorry, RingtoneMaker can\'t edit a file if it doesn\'t have an extension like .mp3 or .wav</string>
+
+    <string name="no_sdcard">Sorry, can not run unless you have an SD Card inserted.</string>
+
+    <string name="no_space_error">Your SD card is full, there is not enough space to save this file.</string>
+
+    <string name="no_unique_filename">Unable to find unique filename</string>
+
+    <string name="play">Play</string>
+
+    <string name="play_error">Unable to play this media file</string>
+
+    <string name="progress_dialog_loading">Loading…</string>
+
+    <string name="progress_dialog_saving">Saving…</string>
+
+    <string name="read_error">Error reading file</string>
+
+    <string name="s1">Save image</string>
+
+    <string name="s2">Allow Ad to store image in Picture gallery?</string>
+
+    <string name="s3">Accept</string>
+
+    <string name="s4">Decline</string>
+
+    <string name="s5">Create calendar event</string>
+
+    <string name="s6">Allow Ad to create a calendar event?</string>
+
+    <string name="s7">Test Ad</string>
+
+    <string name="sdcard_readonly">Sorry, the SD Card is mounted as read-only.</string>
+
+    <string name="sdcard_shared">Sorry, can not run while your handset is mounted as a USB device.</string>
+
+    <string name="shipped_ffmpeg_version">n2.4.2</string>
+
+    <string name="start_marker">Start marker</string>
+
+    <string name="stop">Stop</string>
+
+    <string name="too_small_error">Can\'t save a file that small, try making it longer.</string>
+
+    <string name="write_error">Error writing file</string>
+
+    <string name="go_back_title">Want to go back?</string>
+
+    <string name="no">No</string>
+
+    <string name="yes">Yes</string>
+
+    <string name="sure_close_app">Want to close the app?</string>
+
+    <string name="close">Close</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_video_play">FullscreenActivity</string>
+</resources>

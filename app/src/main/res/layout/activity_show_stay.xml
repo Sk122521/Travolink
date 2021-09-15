@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ShowRestaurantActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_stay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/staycollaspingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            app:contentScrim="@color/colorPrimaryDark"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:expandedTitleGravity="bottom|right"
+            app:expandedTitleMarginBottom="40dp"
+            app:expandedTitleMarginEnd="20dp"
+            app:expandedTitleTextAppearance="@style/ExpandedAppBar"
+            app:collapsedTitleTextAppearance="@style/CollapsedAppBar"
+            >
+            <TextView
+                android:id="@+id/type_stay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                />
+            <ImageView
+                android:id="@+id/stayheaderimage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/staytoolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:titleTextColor="@android:color/white"
+                app:layout_collapseMode="pin"
+                ></androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp">
+            <TextView
+                android:id="@+id/aboutstay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="About us"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/cardview_dark_background"/>
+            <TextView
+                android:id="@+id/about_text_stay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/aboutstay"
+                />
+            <TextView
+                android:id="@+id/stayImageText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/about_text_stay"
+                android:text="Our Images"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/cardview_dark_background"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/roomsImagesRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stayImageText"
+                />
+            <TextView
+                android:id="@+id/exteriorTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/roomsImagesRecyclerView"
+                android:text="famous Places nearby"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/cardview_dark_background"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/nearbyImageRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/exteriorTextView" />
+            <TextView
+                android:id="@+id/AmenitiesTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textSize="20sp"
+                android:layout_below="@id/nearbyImageRecyclerView"
+                android:text="Amenities"
+                android:textColor="@android:color/black" />
+            <TextView
+                android:id="@+id/Amenities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/AmenitiesTextView"
+                android:textSize="15dp" />
+            <TextView
+               android:id="@+id/occupancy_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textSize="20sp"
+                android:layout_below="@id/Amenities"
+                android:text="Occupancy types"
+                android:textColor="@android:color/black" />
+            <TextView
+                android:id="@+id/Occupancy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/occupancy_textview"
+                android:textSize="15dp" />
+            <TextView
+                android:id="@+id/PaymentsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textSize="20sp"
+                android:layout_below="@id/Occupancy"
+                android:text="Payments Methods"
+                android:textColor="@android:color/black" />
+            <TextView
+                android:id="@+id/Payments_stay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/PaymentsText"
+                android:textSize="15dp"
+                android:text="Cash, Cards, UPI"/>
+            <TextView
+                android:id="@+id/Tenants_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textSize="20sp"
+                android:layout_below="@id/Payments_stay"
+                android:text="Tenants Preffered"
+                android:textColor="@android:color/black" />
+            <TextView
+                android:id="@+id/Tenants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Tenants_text"
+                android:textSize="15dp"
+                android:text="Monday, Tuesday, Wednesday, Thursday, Friday, Satuday, Monday"/>
+            <TextView
+                android:id="@+id/WebsiteTextstay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Tenants"
+                android:text="Website :"
+                android:layout_marginTop="2dp"
+                android:textStyle="italic"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/websiteofstay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/WebsiteTextstay"
+                android:text="https//iitg.ac.in"
+                android:autoLink="web"
+                android:linksClickable="true" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/MapButtonstay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="@drawable/locationicon"
+        android:backgroundTint="@android:color/white"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="15dp"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/phone_stay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:backgroundTint="@color/cardview_light_background"
+        android:clickable="true"
+        android:src="@drawable/caller_icon"
+        app:fabSize="normal"
+        app:layout_anchor="@id/app_bar_stay"
+        android:visibility="gone"
+        app:layout_anchorGravity="bottom|right|end" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/edit_stayinfo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Info"
+        app:strokeColor="@color/cardview_light_background"
+        app:strokeWidth="1dp"
+        android:backgroundTint="@color/fui_transparent"
+        android:layout_marginEnd="6dp"
+        android:layout_gravity="end"
+        android:visibility="gone"
+        />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

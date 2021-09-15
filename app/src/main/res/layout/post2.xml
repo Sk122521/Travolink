@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="5dp"
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/Linear_Layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image_Post"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/profile"
+                android:scaleType="centerCrop" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/Linear_Layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/cardview_dark_background"
+                        android:id="@+id/username_post"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name" />
+                    <TextView
+                        android:id="@+id/time_post"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:text="time"
+                        android:textAlignment="viewEnd" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/location_post"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/Linear_Layout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_below="@id/Linear_Layout1">
+            <ImageView
+                android:id="@+id/top_image"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:src="@drawable/tajmahal"
+                android:scaleType="centerCrop"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:background="@color/cardview_shadow_start_color">
+                <TextView
+                    android:id="@+id/name_dest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TajMahaL"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="25sp"
+                    />
+                <TextView
+                    android:id="@+id/address_dest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:textColor="@color/cardview_light_background"
+                    android:text="Agra, Uttar Pradesh"/>
+                <TextView
+                    android:id="@+id/experience"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15sp"
+                    android:textStyle="italic"
+                    android:maxLines="4"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:textColor="@android:color/black"
+                    android:text="My experience here is one ot till now ehere i travelled with alll my experience i would recommed"/>
+                <TextView
+                    android:id="@+id/foodcult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="5dp"
+                    android:text="It food is one of the best .the cuisines you like all the way and culture is very much diffrent from what we see in other parts of country"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/Linear_Layout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_below="@id/Linear_Layout3">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp">
+                <LinearLayout
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <com.like.LikeButton
+                        android:id="@+id/like_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:anim_scale_factor="1.5"
+                        app:circle_end_color="@color/colorAccent"
+                        app:circle_start_color="@color/colorPrimary"
+                        app:dots_primary_color="@color/colorAccent"
+                        app:dots_secondary_color="@color/colorPrimary"
+                        app:icon_size="30dp"
+                        app:like_drawable="@drawable/heart"
+                        app:liked="false"
+                        app:unlike_drawable="@drawable/broken" />
+                    <TextView
+                        android:linksClickable="true"
+                        android:id="@+id/like_text"
+                        android:clickable="true"
+                        android:longClickable="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 likes"
+                        android:contextClickable="true" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="bottom">
+                    <com.like.LikeButton
+                        android:id="@+id/seen_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:anim_scale_factor="1.5"
+                        app:circle_end_color="@color/colorAccent"
+                        app:circle_start_color="@color/colorPrimary"
+                        app:dots_primary_color="@color/colorAccent"
+                        app:dots_secondary_color="@color/colorPrimary"
+                        app:icon_size="30dp"
+                        app:like_drawable="@drawable/seen"
+                        app:liked="false"
+                        app:unlike_drawable="@drawable/unseen" />
+                    <TextView
+                        android:linksClickable="true"
+                        android:id="@+id/seen_text"
+                        android:clickable="true"
+                        android:longClickable="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 Seen"
+                        android:contextClickable="true" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/comment_post_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/messages"
+                        android:layout_gravity="top|center"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/cardview_light_background"/>
+                    <TextView
+                        android:linksClickable="true"
+                        android:id="@+id/comment_post_text"
+                        android:clickable="true"
+                        android:longClickable="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 comment"
+                        android:contextClickable="true" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

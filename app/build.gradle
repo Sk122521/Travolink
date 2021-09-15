@@ -1,0 +1,120 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.firebase.crashlytics'
+    id 'com.google.firebase.firebase-perf'
+    id 'com.google.secrets_gradle_plugin' version '0.5'
+}
+apply plugin: 'com.google.gms.google-services'
+android {
+    signingConfigs {
+        'RELEASE SHA1' {
+            storeFile file('C:\\Users\\Saket\\travel.jks')
+            storePassword 'Saket123'
+            keyAlias 'key0'
+            keyPassword 'Saket123'
+        }
+    }
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.hfad.travelx"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 5
+        versionName "4.0.1"
+        multiDexEnabled true
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        signingConfig signingConfigs.'RELEASE SHA1'
+        ndk.abiFilters 'arm64-v8a'
+        ndk{
+
+            abiFilters 'arm64-v8a'
+
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures{
+        dataBinding = true
+        viewBinding true
+    }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+}
+
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:26.1.1')
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    implementation 'androidx.appcompat:appcompat:1.3.0-alpha02'
+    implementation 'com.google.android.material:material:1.3.0-alpha04'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.google.firebase:firebase-auth:20.0.1'
+    implementation 'com.google.firebase:firebase-database:19.5.1'
+    implementation 'com.google.firebase:firebase-storage:19.2.0'
+    implementation 'com.google.firebase:firebase-functions:19.1.0'
+    implementation 'com.google.firebase:firebase-messaging:21.0.0'
+    implementation 'androidx.core:core:1.5.0-alpha05'
+    implementation 'androidx.navigation:navigation-ui:2.3.2'
+    implementation 'android.arch.navigation:navigation-ui:1.0.0'
+    implementation 'android.arch.navigation:navigation-fragment:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.3.2'
+    implementation 'androidx.recyclerview:recyclerview:1.2.0-beta01'
+    implementation 'com.google.android.gms:play-services-location:17.1.0'
+    implementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.firebaseui:firebase-ui-database:7.1.1'
+    implementation 'com.firebaseui:firebase-ui-auth:7.1.1'
+    implementation 'com.firebaseui:firebase-ui-storage:7.1.1'
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+    implementation 'com.github.jd-alexander:LikeButton:0.2.3'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.7.3'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.11.8'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.11.8'
+    implementation 'com.google.android.exoplayer:exoplayer-hls:2.11.8'
+    implementation 'com.github.abhidiwakar:AnstronCoreHelper:1.1'
+    implementation 'com.iceteck.silicompressorr:silicompressor:2.2.4'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.1.0'
+    implementation 'com.karumi:dexter:5.0.0'
+    implementation 'com.google.android.libraries.places:places:2.4.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0@aar'
+    implementation 'androidx.viewpager2:viewpager2:1.1.0-alpha01'
+    implementation 'com.google.firebase:firebase-crashlytics:17.4.0'
+    implementation 'com.google.firebase:firebase-analytics:18.0.3'
+    implementation 'androidx.annotation:annotation:1.0.0'
+    implementation 'com.facebook.android:facebook-core:[8,9)'
+    implementation 'com.facebook.android:facebook-login:[8,9)'
+    implementation 'com.facebook.android:facebook-android-sdk:[8,9)'
+    implementation 'com.google.firebase:firebase-perf:19.1.1'
+    implementation 'com.google.firebase:firebase-firestore:22.1.2'
+    implementation 'com.google.firebase:firebase-messaging-directboot:20.2.0'
+    implementation 'com.google.firebase:firebase-inappmessaging-display:19.1.5'
+    implementation 'com.google.ar:core:1.24.0'
+    implementation 'androidx.leanback:leanback:1.1.0-rc01'
+    testImplementation 'junit:junit:4.12'
+    implementation 'de.javagl:obj:0.2.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.code.gson:gson:2.3.1'
+    implementation 'com.google.android.gms:play-services-ads:19.0.0'
+    implementation 'com.github.iammert:ScalingLayout:1.2.1'
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+}

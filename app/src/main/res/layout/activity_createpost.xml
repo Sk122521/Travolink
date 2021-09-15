@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="#fff6f6f6" android:layout_width="fill_parent" android:layout_height="fill_parent" android:backgroundTint="#99ffffff" android:backgroundTintMode="screen"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/create_post_toolbar"
+            android:background="@drawable/top_background"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:title="@string/create_post"
+            app:titleTextColor="@color/cardview_dark_background" />
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/post_video_image_linear_layout"
+            android:layout_below="@id/create_post_toolbar">
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/linear_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/create_post_toolbar">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/linear_layout_post_create1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginRight="15.0dip">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/create_post_profileimage"
+                        android:layout_width="70.0dip"
+                        android:layout_height="70.0dip"
+                        android:src="@drawable/profile" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/linear_layout_post_create2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginTop="5.0dip">
+                        <TextView
+                            android:textSize="15.0sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/cardview_dark_background"
+                            android:id="@+id/create_post_profilename"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Name" />
+                        <com.google.android.material.button.MaterialButton
+                            android:textStyle="bold"
+                            android:textColor="@color/cardview_shadow_start_color"
+                            android:id="@+id/Addlocation_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/location"
+                            android:drawableLeft="@drawable/add_location"
+                            android:textAllCaps="false"
+                            android:backgroundTint="@color/cardview_light_background"
+                            app:iconGravity="start"
+                            app:strokeColor="@color/cardview_shadow_start_color"
+                            app:strokeWidth="1dp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/post_addressline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linear_layout_post_create1"
+                    android:layout_margin="5dp"
+                    android:visibility="gone"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/linear_layout_post_create3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15.0dip"
+                    android:layout_below="@id/post_addressline">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/post_description"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/create_post_text"
+                        android:outlineSpotShadowColor="@color/cardview_light_background" />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/post_image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true" />
+                    <VideoView android:id="@+id/post_video"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@id/post_video_image_linear_layout"
+            android:background="@color/cardview_light_background"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/add_photo_button"
+                    android:background="@color/cardview_light_background"
+                    android:clickable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20.0dip"
+                    android:layout_marginTop="13.0dip"
+                    android:src="@drawable/add_photo" />
+                <TextView
+                    android:textSize="15.0sp"
+                    android:textStyle="normal"
+                    android:textColor="@color/cardview_dark_background"
+                    android:id="@+id/post_button"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100.0dip"
+                    android:layout_marginTop="12.0dip"
+                    android:layout_marginRight="20.0dip"
+                    android:text="@string/post"
+                    android:textAlignment="viewEnd" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

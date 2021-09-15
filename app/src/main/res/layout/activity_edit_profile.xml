@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/parent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/edit_profile_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10.0sp"
+                android:text="@string/Edit_profile"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20.0sp"
+                android:textStyle="bold" />
+            <FrameLayout
+                android:id="@+id/Fl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_profile_text">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/hdrimg_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:layout_margin="10dp"
+                    android:scaleType="centerCrop"/>
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/hdr_btn_profile"
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_gravity="bottom|center|right"
+                    android:background="@drawable/button"
+                    android:layout_margin="20dp"
+                    android:src="@drawable/camera1"
+                    android:onClick="ChangeHeaderImage"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Fl1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_profile"
+                    android:layout_width="150.0dip"
+                    android:layout_height="150.0dip"
+                    android:src="@drawable/profile"
+                    app:civ_border_color="@color/colorPrimary"
+                    app:civ_border_width="3.0dip" />
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/camera_button_profile"
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_below="@id/image_profile"
+                    android:layout_gravity="bottom|center|right"
+                    android:background="@drawable/button"
+                    android:src="@drawable/camera1" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_profile"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/frame_layout"
+                android:layout_marginTop="10.0dip"
+                android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fullname_profile"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginRight="15.0dip"
+                    android:hint="@string/fullname"
+                    android:textColorHint="@color/cardview_dark_background"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="25.0dip"
+                    app:boxCornerRadiusBottomStart="25.0dip"
+                    app:boxCornerRadiusTopEnd="25.0dip"
+                    app:boxCornerRadiusTopStart="25.0dip"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    app:counterEnabled="true"
+                    app:endIconMode="clear_text"
+                    app:helperText="@string/required">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fullname_text_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/status_profile"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_marginRight="15.0dip"
+                    android:hint="Work/Job title"
+                    android:textColorHint="@color/cardview_dark_background"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="25.0dip"
+                    app:boxCornerRadiusBottomStart="25.0dip"
+                    app:boxCornerRadiusTopEnd="25.0dip"
+                    app:boxCornerRadiusTopStart="25.0dip"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    app:endIconMode="dropdown_menu">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/dropdown_status_profile"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/Address_profile"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginTop="3.0dip"
+                    android:layout_marginRight="15.0dip"
+                    android:hint="@string/Address"
+                    android:textColorHint="@color/cardview_dark_background"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="25.0dip"
+                    app:boxCornerRadiusBottomStart="25.0dip"
+                    app:boxCornerRadiusTopEnd="25.0dip"
+                    app:boxCornerRadiusTopStart="25.0dip"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/Address_text_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/bio_profile"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginTop="3.0dip"
+                    android:layout_marginRight="15.0dip"
+                    android:hint="@string/bio"
+                    android:textColorHint="@color/cardview_dark_background"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="25.0dip"
+                    app:boxCornerRadiusBottomStart="25.0dip"
+                    app:boxCornerRadiusTopEnd="25.0dip"
+                    app:boxCornerRadiusTopStart="25.0dip"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/bio_text_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/website_profile"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginTop="3.0dip"
+                    android:layout_marginRight="15.0dip"
+                    android:hint="@string/website"
+                    android:textColorHint="@color/cardview_dark_background"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="25.0dip"
+                    app:boxCornerRadiusBottomStart="25.0dip"
+                    app:boxCornerRadiusTopEnd="25.0dip"
+                    app:boxCornerRadiusTopStart="25.0dip"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    app:counterEnabled="true"
+                    app:endIconMode="clear_text"
+                    app:helperText="@string/websiteandlinks">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/website_text_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textWebEditText" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/save_button_for_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_profile"
+                android:layout_marginLeft="25.0dip"
+                android:layout_marginTop="25.0dip"
+                android:layout_marginRight="25.0dip"
+                android:background="@drawable/button"
+                android:padding="10.0dip"
+                android:text="@string/saveinfo"
+                android:textSize="15.0sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

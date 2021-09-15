@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "39965951991",
+    "firebase_url": "https://travelx-5c74c.firebaseio.com",
+    "project_id": "travelx-5c74c",
+    "storage_bucket": "travelx-5c74c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39965951991:android:e929199db6baf3efd250f2",
+        "android_client_info": {
+          "package_name": "com.hfad.travelx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39965951991-2vc5281d3lde4h5b8g4grub5n8cot39g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hfad.travelx",
+            "certificate_hash": "4feb37c06324d26fe057bb9732317fec55b3df97"
+          }
+        },
+        {
+          "client_id": "39965951991-5kg6siuoum27ovj5cdf1t0kd931l2geh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-Dkbk9ifuZOAejKlx2iHAeF0d4iPCzk0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39965951991-5kg6siuoum27ovj5cdf1t0kd931l2geh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

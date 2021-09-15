@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:icon="@drawable/profile_icon" android:id="@+id/nav_profile" android:title="@string/Profile" />
+        <item android:icon="@drawable/person_search" android:id="@+id/nav_findfreinds" android:title="@string/Find_Freinds" />
+        <item android:icon="@drawable/messages" android:id="@+id/nav_Message" android:title="@string/Message" />
+        <item android:icon="@drawable/find_people" android:id="@+id/nav_friendrequest" android:title="@string/friendrequest" />
+    </group>
+    <item android:title="@string/nav_support">
+        <menu>
+            <item android:icon="@drawable/logout" android:id="@+id/nav_logout" android:title="@string/Logout" />
+            <item android:icon="@android:drawable/sym_action_email" android:id="@+id/nav_feedback" android:title="@string/Feedaback" />
+            <item android:icon="@android:drawable/ic_menu_help" android:id="@+id/nav_help" android:title="@string/nav_help" />
+            <item android:icon="@drawable/policy_icon" android:id="@+id/nav_policy" android:title="@string/nav_policy" />
+        </menu>
+    </item>
+</menu>

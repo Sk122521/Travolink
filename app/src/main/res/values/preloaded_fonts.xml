@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/akronim</item>
+        <item>@font/architects_daughter</item>
+        <item>@font/astloch_bold</item>
+        <item>@font/bungee_shade</item>
+        <item>@font/cabin_sketch</item>
+        <item>@font/faster_one</item>
+        <item>@font/fredericka_the_great</item>
+        <item>@font/jacques_francois_shadow</item>
+        <item>@font/sarpanch_semibold</item>
+        <item>@font/shadow</item>
+    </array>
+</resources>

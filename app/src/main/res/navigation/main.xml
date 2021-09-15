@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigation
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    app:startDestination="@id/Video"
+    android:id="@+id/main">
+<fragment
+        android:id="@id/Video"
+        android:name="com.hfad.travelx.VideoFragment"
+        android:label="Videos"/>
+<fragment
+    android:id="@id/travel"
+    android:name="com.hfad.travelx.ExploreFragment"
+    android:label="@string/Exploreit"/>
+<fragment
+        android:id="@+id/addPost"
+        android:name="com.hfad.travelx.SelectFragment"
+        android:label="PostsFragment" />
+<fragment
+    android:id="@id/posts"
+    android:name="com.hfad.travelx.PostsFragment"
+    android:label="@string/Posts"/>
+<fragment
+        android:id="@+id/notification"
+        android:name="com.hfad.travelx.notification_fragment"
+        android:label="@string/Posts"/>
+<action
+    android:id="@+id/action_global_posts3"
+    app:destination="@id/posts"/>
+</navigation>

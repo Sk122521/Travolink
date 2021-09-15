@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_View"
+            android:clickable="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?android:selectableItemBackground"
+            app:cardBackgroundColor="@color/colorPrimary">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/relative_layout1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/search_view"
+                    android:background="@drawable/input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginTop="3.0dip"
+                    android:layout_weight="20.0"
+                    app:iconifiedByDefault="false"
+                    android:backgroundTint="@color/cardview_light_background"
+                    android:contextClickable="true"
+                    app:queryHint="Search Friends" />
+                <com.google.android.material.button.MaterialButton
+                    android:textSize="10.0sp"
+                    android:textColor="@color/cardview_dark_background"
+                    android:id="@+id/filter_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55.0dip"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:text="Filter"
+                    android:layout_weight="1.0"
+                    android:onClick="Showfilteroption"
+                    android:backgroundTint="@color/cardview_light_background"
+                    app:cornerRadius="15.0dip" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip"
+            android:layout_below="@id/card_View"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

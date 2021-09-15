@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/custom_profile_image" android:layout_width="47.0dip" android:layout_height="47.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/profile" android:cropToPadding="true" android:layout_alignParentTop="true" android:layout_alignParentEnd="true" />
+    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/cardview_light_background" android:id="@+id/custom_profile_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Display Username" android:layout_alignParentTop="true" android:layout_alignParentStart="true" />
+    <TextView android:textSize="12.0sp" android:textColor="@color/cardview_light_background" android:id="@+id/custom_online_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_below="@id/custom_profile_name" />
+</RelativeLayout>

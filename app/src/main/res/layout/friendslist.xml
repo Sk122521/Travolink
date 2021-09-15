@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5.0dip"
+    android:layout_marginBottom="5.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:background="@color/cardview_light_background"
+        android:animationCache="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:id="@id/frame_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_friends"
+                    android:layout_width="55.0dip"
+                    android:layout_height="55.0dip"
+                    android:src="@drawable/profile" />
+            </FrameLayout>
+            <TextView
+                android:textSize="18.0sp"
+                android:textColor="@color/cardview_dark_background"
+                android:id="@+id/name_friends"
+                android:padding="10.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="name"
+                android:textAlignment="viewStart"
+                android:layout_toEndOf="@id/frame_layout" />
+            <com.google.android.material.button.MaterialButton
+                android:textSize="10.0sp"
+                android:textStyle="bold"
+                android:textColor="@color/cardview_dark_background"
+                android:id="@+id/Accept_friends"
+                android:background="@drawable/button1"
+                android:padding="5.0sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10.0dip"
+                android:text="Accept Request "
+                android:drawableLeft="@drawable/add_freind"
+                android:textAllCaps="true"
+                android:layout_alignParentEnd="true"
+                app:iconGravity="start"
+                app:strokeColor="@color/cardview_shadow_start_color"
+                app:strokeWidth="1.0dip" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
